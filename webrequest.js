@@ -7,7 +7,8 @@ async function webrequest(url, method, payload, headers, username, password) {
     method,
     auth,
     data: payload,
-    headers
+    headers, 
+    validateStatus: () => true
   };
   try {
     const response = await axios(config);
